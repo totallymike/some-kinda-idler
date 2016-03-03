@@ -1,13 +1,8 @@
 import { createStore } from 'redux'
-// import { combineReducers } from 'redux-immutablejs'
+import { combineReducers } from 'redux-immutable'
+import coins from './redux/coins'
 
-import Immutable from 'immutable'
-
-const initialState = Immutable.Map()
-
-function reducer(state = initialState, action) {
-  return state
-}
+const reducer = combineReducers({ coins })
 
 const store = createStore(reducer)
 
