@@ -6,6 +6,15 @@ import store from './store'
 import Balance from './containers/Balance'
 import Button from './components/Increment'
 import 'index.html'
+import { increment } from './redux/coins'
+
+function mountTickLoop(store) {
+  window.setInterval(function () {
+    store.dispatch(increment())
+  }, 12)
+}
+
+mountTickLoop(store)
 
 const App = (
   <Provider store={store}>
