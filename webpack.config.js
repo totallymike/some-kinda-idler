@@ -12,10 +12,20 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.html$/,
+        loader: 'file',
+        query: {
+          name: '[name].[ext]',
+        },
+      },
+      {
         test: /\.jsx?/,
         loader: 'babel',
         include: path.resolve(__dirname, 'src'),
       },
     ],
+  },
+  devServer: {
+    contentBase: './src',
   },
 }
