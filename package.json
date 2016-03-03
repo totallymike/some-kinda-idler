@@ -1,0 +1,25 @@
+{
+  "name": "idler_thing",
+  "version": "0.1.0",
+  "description": "An idle game, probably",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Westbom",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.6.4",
+    "babel-core": "^6.6.4",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.2.4",
+    "webpack": "^2.1.0-beta.4",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.9.1"
+  },
+  "dependencies": {
+    "react": "^0.15.0-alpha.1",
+    "react-dom": "^0.15.0-alpha.1",
+    "redux": "^3.3.1"
+  }
+}
