@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   entry: './src',
   output: {
@@ -9,7 +11,7 @@ module.exports = {
       {
         test: /\.jsx?/,
         loader: 'babel',
-        include: __dirname + '/src',
+        include: path.resolve(__dirname, 'src'),
       },
     ],
   },
