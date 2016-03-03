@@ -1,7 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
 
+const nodeEnv = process.env.NODE_ENV || 'development'
+const isProd = nodeEnv === 'production'
+
 module.exports = {
+  devTools: isProd ? 'hidden-source-map' : 'cheap-eval-source-map',
   context: path.join(__dirname, 'src'),
   entry: {
     js: './index.js',
@@ -46,6 +50,9 @@ module.exports = {
       },
       sourceMap: false,
     }),
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify(nodeEnv) },
+    }),
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -56,5 +63,6 @@ module.exports = {
   },
   devServer: {
     contentBase: './src',
+    port: 3000,
   },
 }

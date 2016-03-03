@@ -4,8 +4,8 @@
   "description": "An idle game, probably",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --history-api-fallback --progress --port 3000",
+    "build": "NODE_ENV=production webpack",
+    "start": "webpack-dev-server --history-api-fallback --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Michael Westbom",
