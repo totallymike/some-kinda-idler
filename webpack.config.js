@@ -5,6 +5,7 @@ module.exports = {
   context: path.join(__dirname, 'src'),
   entry: {
     js: './index.js',
+    vendor: ['react'],
   },
   output: {
     path: 'builds',
@@ -27,6 +28,11 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: Infinity,
+      filename: 'vendor.bundle.js',
+    }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
