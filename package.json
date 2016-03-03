@@ -30,6 +30,7 @@
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",
     "redux-actions": "^0.9.1",
+    "redux-batched-subscribe": "^0.1.4",
     "redux-immutable": "^3.0.6"
   }
 }
