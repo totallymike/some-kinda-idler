@@ -58,6 +58,8 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
     alias: {
       containers: path.resolve(__dirname, 'src', 'containers'),
+      components: path.resolve(__dirname, 'src', 'components'),
+      ducks: path.resolve(__dirname, 'src', 'ducks'),
     },
     modules: [
       path.resolve('./src'),

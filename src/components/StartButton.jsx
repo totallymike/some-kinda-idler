@@ -1,20 +1,23 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { increment } from 'ducks/coins'
+import { startTicker } from 'ducks/game'
 
-class Button extends Component {
+class StartButton extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
   };
 
   onClick = () => {
     const { dispatch } = this.props
-    dispatch(increment())
-  };
+
+    dispatch(startTicker())
+  }
 
   render() {
-    return <button onClick={this.onClick}>Increment</button>
+    return (
+      <button onClick={this.onClick}>Start</button>
+    )
   }
 }
 
-export default connect()(Button)
+export default connect()(StartButton)
