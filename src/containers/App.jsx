@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import Balance from 'containers/Balance'
 import Increment from 'components/Increment'
 import StartButton from 'components/StartButton'
+import BuildingList from 'containers/BuildingList'
 import store from '../store'
 
 const App = (
@@ -11,6 +12,7 @@ const App = (
       <Increment />
       <StartButton />
       <Balance />
+      <BuildingList />
     </div>
   </Provider>
 )
